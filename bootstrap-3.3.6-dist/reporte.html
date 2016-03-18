@@ -9,6 +9,8 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="reporte.css" rel="stylesheet">
+
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -45,43 +47,48 @@
   </nav>
     <div class="container">
       <div class="jumbotron">
+
  <h2>Crear Reporte</h2>
+ <div class="divider" style="height:5px;background-color:#aaaaaa;">
+ </div>
       <form class="form-reporte">
-        <h3 class="form-reporte-heading">Agregar Usuario</h3>
+       
         <table class="table">
-    <thead  >
+    <thead >
       <tr >
-        <th>Nombre </th>
-        <th>Apellidos</th>
-        <th>Correo electronico</th>
-        <th>Porcentaje de avanze</th>
-        <th>Fecha de reporte</th>
-        <th>Seleccionar</th>
+        <b>
+        <td class="titulo" >Nombre</th>
+        <td class="col_4 titulo">Apellidos</th>
+        <td class="col_4 titulo">Correo electronico</th>
+        <td class="col_4 titulo">Porcentaje de avanze</th>
+        <td class="titulo">Fecha de reporte</th>
+        <td class="titulo" >Seleccionar</th>
+          </b> 
       </tr>
     </thead>
     <tbody >
       <tr class="success">
         <td>Juan</td>
-        <td>Pablo</td>
-        <td>john@example.com</td>
-        <td>2/5</td>
+        <td class="col_4">Pablo</td>
+        <td class="col_4">john@example.com</td>
+        <td class="col_4">2/5</td>
         <td>12/01/2016</td>
         <td > <input type="checkbox" ></td>
 
       </tr>
       <tr class="danger">
         <td>Maria</td>
-        <td>Moreno</td>
-        <td>mari@example.com</td>
-         <td>4/5</td>
+        <td class="col_4">Moreno</td>
+        <td class="col_4">mari@example.com</td>
+         <td class="col_4">4/5</td>
         <td>12/02/2016</td>
         <td> <input type="checkbox"></td>
       </tr>
       <tr class="success">
         <td>Julio</td>
-        <td>Perez</td>
-        <td>Julio@example.com</td>
-         <td>4/5</td>
+        <td class="col_4">Perez</td>
+        <td class="col_4" >Julio@example.com</td>
+         <td class="col_4">4/5</td>
         <td>2/03/2016</td>
         <td> <input type="checkbox"></td>
       </tr>
