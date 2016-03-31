@@ -1,0 +1,91 @@
+ <body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Yo Construyo</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="#">Mi Perfil</a></li>
+          <li><a href="#">Historial de avances</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Cerrar Sesion</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+    <div class="container">
+      <div class="jumbotron">
+
+ <h2>Crear Reporte</h2>
+ <div class="divider" style="height:5px;background-color:#aaaaaa;">
+ </div>
+      <form class="form-reporte">
+       
+        <table class="table">
+    <thead >
+      <tr >
+        <b>
+        <td class="titulo" >Nombre</th>
+        <td class="col_4 titulo">Apellidos</th>
+        <td class="col_4 titulo">Correo electronico</th>
+        <td class="col_4 titulo">Porcentaje de avanze</th>
+        <td class="titulo">Fecha de reporte</th>
+        <td class="titulo" >Seleccionar</th>
+          </b> 
+      </tr>
+    </thead>
+    <tbody >
+      <tr class="success">
+        <td>Juan</td>
+        <td class="col_4">Pablo</td>
+        <td class="col_4">john@example.com</td>
+        <td class="col_4">2/5</td>
+        <td>12/01/2016</td>
+        <td > <input type="checkbox" ></td>
+
+      </tr>
+      <tr class="danger">
+        <td>Maria</td>
+        <td class="col_4">Moreno</td>
+        <td class="col_4">mari@example.com</td>
+         <td class="col_4">4/5</td>
+        <td>12/02/2016</td>
+        <td> <input type="checkbox"></td>
+      </tr>
+      <tr class="success">
+        <td>Julio</td>
+        <td class="col_4">Perez</td>
+        <td class="col_4" >Julio@example.com</td>
+         <td class="col_4">4/5</td>
+        <td>2/03/2016</td>
+        <td> <input type="checkbox"></td>
+      </tr>
+    </tbody>
+  </table>
+        
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Descargar Pdf</button>
+
+        
+
+      </form>
+</div>
+ 
+
+    </div> <!-- /container -->
+
+
+
+      
+  </body>
+<p>Find me in app/views/static_pages/reporte.html.erb</p>
