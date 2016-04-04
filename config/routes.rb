@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get '/home' => "pages#userhome", as: :user_root
   get '/admin/home' => "pages#adminhome", as: :admin_root
-
+  
   devise_scope :user do
     root to: "devise/sessions#new"
   end
