@@ -1,11 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Programs</h1>
+<h1>Programas Registrados</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
+      <th>Nombre</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,9 +14,9 @@
     <% @programs.each do |program| %>
       <tr>
         <td><%= program.name %></td>
-        <td><%= link_to 'Show', program %></td>
-        <td><%= link_to 'Edit', edit_program_path(program) %></td>
-        <td><%= link_to 'Destroy', program, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver Info', program %></td>
+        <td><%= link_to 'Editar', edit_program_path(program) %></td>
+        <td><%= link_to 'Eliminar', program, method: :delete, data: { confirm: '¿Eliminar Programa?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,6 +24,6 @@
 
 <br>
 
-<%= link_to 'New Program', new_program_path %>
+<%= link_to 'Crear Programa', new_program_path %>
 
-<%= link_to 'Go Back', admin_root_path %>
+<%= link_to 'Regresar', admin_root_path %>

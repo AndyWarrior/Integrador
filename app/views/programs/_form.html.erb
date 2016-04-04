@@ -12,10 +12,10 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <h3><%= f.label "Nombre" %></h3>
     <%= f.text_field :name %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Guardar", :class => "btn btn-lg btn-primary cemex-red btn-otros btn-block" %>
   </div>
 <% end %>

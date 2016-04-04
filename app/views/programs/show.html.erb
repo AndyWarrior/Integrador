@@ -1,9 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @program.name %>
-</p>
+<h1>Información de Programa</h1>
 
-<%= link_to 'Edit', edit_program_path(@program) %> |
-<%= link_to 'Back', programs_path %>
+<h3>
+  <strong>Nombre:</strong>
+  <%= @program.name %>
+</h3>
+
+
+<%= link_to 'Editar', edit_program_path(@program), :class => "btn btn-lg btn-primary cemex-blue btn-otros btn-block" %>
+
+<%= link_to 'Regresar', programs_path, :class => "btn btn-lg btn-primary cemex-blue btn-otros btn-block" %>
