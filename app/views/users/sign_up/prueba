@@ -1,0 +1,20 @@
+    <div class="container">
+
+      <form class="form-signin">
+
+        <h2 class="form-signin-heading">Registrarse</h2>
+
+        <label for="inputEmail" class="sr-only">Usuario</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Usuario" required autofocus>
+        
+        <label for="inputPassword" class="sr-only">Contraseña</label>
+        <input type="password" id="inputPassword" class="form-control password-middle" placeholder="Contraseña" required>
+        
+        <label for="inputPasswordConfirm" class="sr-only">Contraseña</label>
+        <input type="password" id="inputPasswordConfirm" class="form-control confirm-password" placeholder="Confirmar Contraseña" required>
+        
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Registrar</button>
+
+      </form>
+
+    </div> <!-- /container -->
