@@ -2,7 +2,12 @@ Rails.application.routes.draw do
   devise_for :admins
   devise_for :users
 
-  root 'pages#home'
+  get '/home' => "pages#userhome", as: :user_root
+  get '/admin/home' => "pages#adminhome", as: :admin_root
+
+  devise_scope :user do
+    root to: "devise/sessions#new"
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
