@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :steps
+  resources :phases
+  resources :projects
+  resources :programs
   devise_for :admins
   devise_for :users
 
