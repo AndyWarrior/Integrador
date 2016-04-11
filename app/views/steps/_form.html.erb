@@ -19,6 +19,10 @@
     <%= f.label :numstep %><br>
     <%= f.number_field :numstep %>
   </div>
+  <div class="field">
+    <%= f.label :phase_id %><br>
+    <%= select("step", "phase_id", Phase.all.collect {|p| [ p.name, p.id ] }) %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
