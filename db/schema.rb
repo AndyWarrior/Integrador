@@ -34,9 +34,12 @@ ActiveRecord::Schema.define(version: 20160408051246) do
   create_table "phases", force: :cascade do |t|
     t.string   "name",       limit: 255
     t.integer  "numphase",   limit: 4
+    t.integer  "project_id", limit: 4
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
+
+  add_index "phases", ["project_id"], name: "index_phases_on_project_id", using: :btree
 
   create_table "posts", force: :cascade do |t|
     t.string   "title",       limit: 255
@@ -54,16 +57,22 @@ ActiveRecord::Schema.define(version: 20160408051246) do
   create_table "projects", force: :cascade do |t|
     t.string   "name",        limit: 255
     t.text     "description", limit: 65535
+    t.integer  "program_id",  limit: 4
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
   end
 
+  add_index "projects", ["program_id"], name: "index_projects_on_program_id", using: :btree
+
   create_table "steps", force: :cascade do |t|
     t.string   "name",       limit: 255
     t.integer  "numstep",    limit: 4
+    t.integer  "phase_id",   limit: 4
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
+
+  add_index "steps", ["phase_id"], name: "index_steps_on_phase_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false

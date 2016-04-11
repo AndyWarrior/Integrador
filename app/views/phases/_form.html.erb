@@ -19,6 +19,10 @@
     <%= f.label :numphase %><br>
     <%= f.number_field :numphase %>
   </div>
+  <div class="field">
+    <%= f.label :project_id %><br>
+    <%= select("phase", "project_id", Project.all.collect {|p| [ p.name, p.id ] }) %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
