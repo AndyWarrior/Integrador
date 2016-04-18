@@ -27,7 +27,7 @@ body {
 .form-signin {
   width: 330px;
   padding: 15px;
-  margin: 0 10px;
+  margin: 0 auto;
    position: relative;
   height: auto;
   -webkit-box-sizing: border-box;
@@ -40,6 +40,7 @@ body {
 .centrado
 {
   text-align: center;
+  
 }
 .field
 {
