@@ -13,3 +13,55 @@
  *= require_tree .
  *= require_self
  */
+.logbox{
+    float: none;
+    margin: 0 auto;
+    background-color: gray; 
+}
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #eee;
+}
+
+.form-signin {
+  width: 330px;
+  padding: 15px;
+  margin: 0 10px;
+   position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 15px;
+  font-size: 16px;
+}
+
+.centrado
+{
+  text-align: center;
+}
+.field
+{
+  margin: 0 auto;
+}
+.links
+{
+  font-size:16px;
+
+}
+
+@media all and (max-width: 479px) {
+    .form-signin {
+  max-width: 300px;
+  padding: 15px;
+  margin: 0 auto;
+   position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 15px;
+  font-size: 16px;
+}
+}

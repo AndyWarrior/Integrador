@@ -1,16 +1,22 @@
-<h2>Forgot your password?</h2>
+<div class="container  ">
+  
+  <div class= "col-sm-offset-4 col-sm-4">
+
+<h3 class="centrado">¿Olvidaste tu contraseña?</h3>
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+    
+    <%= f.email_field :email, autofocus: true, :placeholder => "Correo",:class => "form-signin" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
+    <%= f.submit "Enviar ", :class => "btn btn-lg btn-primary btn-block",:style => "max-width: 330px; "%>
   </div>
 <% end %>
 
 <%= render "users/shared/links" %>
+</div>
+</div>
