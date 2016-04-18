@@ -1,3 +1,39 @@
+
+/*CEMEX Colors*/
+
+.cemex-blue{
+  background-color: #023185;
+}
+
+.cemex-red{
+  background-color: #E3303D;
+}
+
+.cemex-white{
+  background-color: #FFFFFF;
+  color: #000;
+}
+
+/*Login*/
+
+.logo{
+  margin-top: -10px;
+  width: 70%;
+  max-width: 300px;
+}
+
+.logo-navbar{
+  width:100px;
+}
+
+.text-navbar{
+  width: 150px;
+}
+
+.cm-btn-help{
+  margin-bottom: -15px;
+}
+
 body {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -14,7 +50,7 @@ body {
 }
 .form-signin-heading{
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 .form-signin .btn {
   margin-top: 20px;
