@@ -1,8 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Programas Registrados</h1>
+<h2>Programas Registrados</h2>
 
-<table border="1">
+<div class="table-responsive">
+<table class="table" style="width: 100%;">
   <thead>
     <tr>
       <th>Nombre</th>
@@ -12,17 +13,16 @@
 
   <tbody>
     <% @programs.each do |program| %>
-      <tr>
-
-        <td><%= program.name %></td>
-        <td><%= link_to 'Ver Info', program, :class => "btn btn-primary cemex-blue btn-xs" %></td>
-        <td><%= link_to 'Editar', edit_program_path(program), :class => "btn btn-primary cemex-blue btn-xs" %></td>
-        <td><%= link_to 'Eliminar', program, method: :delete, data: { confirm: '¿Eliminar Programa?'}, :class => "btn btn-primary cemex-red btn-xs" %></td>
-
-      </tr>
+    <tr>
+      <td><%= program.name %></td>
+      <td><%= link_to 'Ver Info', program, :class => "btn btn-primary cemex-blue btn-xs" %></td>
+      <td><%= link_to 'Editar', edit_program_path(program), :class => "btn btn-primary cemex-blue btn-xs" %></td>
+      <td><%= link_to 'Eliminar', program, method: :delete, data: { confirm: '¿Eliminar Programa?'}, :class => "btn btn-primary cemex-red btn-xs" %></td>
+    </tr>
     <% end %>
   </tbody>
 </table>
+</div>
 
 <br>
 
