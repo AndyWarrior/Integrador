@@ -1,11 +1,15 @@
-<h1>Bienvenido Administrador!!!</h1>
+<div class="container">
+	
+<div class= "col-sm-offset-4 col-sm-4">
+	<h1 class="centrado">Bienvenido Administrador!!!</h1>
+<%= link_to 'Programas', programs_path,:class => "btn btn-lg btn-primary cemex-blue btn-otros btn-block" %>
 
-<%= link_to 'Programas', programs_path %>
+<%= link_to 'Proyectos', projects_path, :class => "btn btn-lg btn-primary cemex-blue btn-otros btn-block" %>
 
-<%= link_to 'Proyectos', projects_path %>
+<%= link_to 'Fases', phases_path, :class => "btn btn-lg btn-primary cemex-blue btn-otros btn-block" %>
 
-<%= link_to 'Fases', phases_path %>
+<%= link_to 'Pasos', steps_path, :class => "btn btn-lg btn-primary cemex-blue btn-otros btn-block" %>
 
-<%= link_to 'Pasos', steps_path %>
-
-<%= link_to('Logout', destroy_admin_session_path, :method => :delete) %>        
+      
+</div>
+</div>
