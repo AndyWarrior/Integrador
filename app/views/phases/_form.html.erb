@@ -12,18 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.label "Nombre" %><br>
+    <%= f.text_field :name, :placeholder => "Nombre" %>
   </div>
   <div class="field">
-    <%= f.label :numphase %><br>
+    <%= f.label "Numero" %><br>
     <%= f.number_field :numphase %>
   </div>
   <div class="field">
-    <%= f.label :project_id %><br>
+    <%= f.label "Proyecto" %><br>
     <%= select("phase", "project_id", Project.all.collect {|p| [ p.name, p.id ] }) %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Actualizar Fase" %>
   </div>
 <% end %>
