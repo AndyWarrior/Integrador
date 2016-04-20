@@ -27,12 +27,9 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li><a href="#">usuario</a></li>
-          <li><a href="#">Historial de avances</a></li>
-          <li><a href="#">Historial de avances</a></li>
-          <li><a href="#">Historial de avances</a></li>
-          <li><a href="#">Historial de avances</a></li>
-          <li><a href="#">Historial de avances</a></li>
+          <li><%= link_to 'Mi proyecto', user_root_path%></li>
+          <li><%= link_to 'Mi perfil', user_form_path%></li>
+         
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><%= link_to('Salir', destroy_admin_session_path, :method => :delete) %>  </li>
