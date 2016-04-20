@@ -1,12 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Steps</h1>
+<h1>Lista de Pasos</h1>
 
-<table>
+<div class="table-responsive">
+<table class="table" style="width: 100%;">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Numstep</th>
+      <th>Nombre</th>
+      <th>Numero</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,16 +17,17 @@
       <tr>
         <td><%= step.name %></td>
         <td><%= step.numstep %></td>
-        <td><%= link_to 'Show', step %></td>
-        <td><%= link_to 'Edit', edit_step_path(step) %></td>
-        <td><%= link_to 'Destroy', step, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver Info', step, :class => "btn btn-lg btn-primary cemex-blue btn-otros btn-block btn-xs" %></td>
+        <td><%= link_to 'Editar', edit_step_path(step), :class => "btn btn-lg btn-primary cemex-blue btn-otros btn-block btn-xs" %></td>
+        <td><%= link_to 'Eliminar', step, :class => "btn btn-lg btn-primary cemex-red btn-otros btn-block btn-xs",  method: :delete, data: { confirm: '¿Estás seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+</div>
 
 <br>
 
-<%= link_to 'New Step', new_step_path %>
+<%= link_to 'Nuevo Paso', new_step_path, :class => "btn btn-lg btn-primary cemex-blue btn-otros btn-block" %>
 
-<%= link_to 'Go Back', admin_root_path %>
+<%= link_to 'Regresar', admin_root_path, :class => "btn btn-lg btn-primary cemex-blue btn-otros btn-block" %>
