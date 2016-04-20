@@ -24,6 +24,6 @@
     <%= select("phase", "project_id", Project.all.collect {|p| [ p.name, p.id ] }) %>
   </div>
   <div class="actions">
-    <%= f.submit "Actualizar Fase", :class => "btn btn-lg btn-primary cemex-blue btn-otros btn-block" %>
+    <%= f.submit "Nueva Fase", :class => "btn btn-lg btn-primary cemex-blue btn-otros btn-block" %>
   </div>
 <% end %>
