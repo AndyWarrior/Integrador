@@ -29,6 +29,10 @@
         <ul class="nav navbar-nav">
           <li><a href="#">usuario</a></li>
           <li><a href="#">Historial de avances</a></li>
+          <li><a href="#">Historial de avances</a></li>
+          <li><a href="#">Historial de avances</a></li>
+          <li><a href="#">Historial de avances</a></li>
+          <li><a href="#">Historial de avances</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><%= link_to('Salir', destroy_admin_session_path, :method => :delete) %>  </li>
@@ -53,8 +57,16 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li><a href="#">admin</a></li>
+          <li><%= link_to 'Administrador', admin_root_path%></li>
+          <li><%= link_to 'Programas', programs_path %></li>
+          <li><%= link_to 'Proyectos', projects_path %>
+</li>
+          <li><%= link_to 'Fases', phases_path %>
+</li>
+          <li><%= link_to 'Pasos', steps_path%>
+</li>
           <li><a href="#">Historial de avances</a></li>
+
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><%= link_to('Salir', destroy_admin_session_path, :method => :delete) %>  </li>
