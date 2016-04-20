@@ -55,15 +55,15 @@
   </div>
   <div class="field">
     <%= f.label "De qué material están hechas las paredes de su casa?" %><br>
-    <%= f.text_field :wall_material %>
+    <%= select_tag "wall_material", "<option>Material de deshecho</option><option>Lámina de cartón</option><option>Lámina metálica o de asbesto</option><option>Carrizo, bambú o palma</option><option>Embarro o Bajareque</option><option>Madera o tejamanil</option><option>Adobe Terrado con viguería</option><option>Multipanel</option><option>Tabique, ladrillo, tabicón, block</option><option>Piedra o cantera</option><option>Concreto</option><option>Otro</option>".html_safe %>
   </div>
   <div class="field">
     <%= f.label "De qué material está hecho el techo de su casa?" %><br>
-    <%= f.text_field :roof_material %>
+    <%= select_tag "roof_material", "<option>Material de deshecho</option><option>Lámina de cartón</option><option>Lámina metálica o de asbesto</option><option>Carrizo, bambú o palma</option><option>Madera o tejamanil</option><option>Adobe Terrado con viguería</option><option>Teja</option><option>Loza de concreto sólida o con tabique</option><option>Vigueta de acero con tabique, tabicón, unicel, cuña o bovedilla</option><option>Otro</option>".html_safe %>
   </div>
   <div class="field">
     <%= f.label "De qué material está hecho el piso de su casa?" %><br>
-    <%= f.text_field :floor_material %>
+    <%= select_tag "floor_material", "<option>Tierra</option><option>Cemento o firme</option><option>Loseta vinílica, linóleum o congóleum</option><option>Mosaico o loseta de cemento</option><option>Vitropiso, mármol o terrazo</option><option>Madera, duela o parquet</option><option>Alfombra</option><option>Otro</option>".html_safe %>
   </div>
   <div class="field">
     <%= f.label "Contrata a un albañil o construye las cosas usted?" %><br>
