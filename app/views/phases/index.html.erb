@@ -19,7 +19,7 @@
         <td><%= phase.numphase %></td>
         <td><%= link_to 'Ver Info', phase, :class => "btn btn-lg btn-primary cemex-blue btn-otros btn-block btn-xs" %></td>
         <td><%= link_to 'Editar', edit_phase_path(phase), :class => "btn btn-lg btn-primary cemex-blue btn-otros btn-block btn-xs" %></td>
-        <td><%= link_to 'Eliminar', phase, :class => "btn btn-lg btn-primary cemex-blue btn-otros btn-block btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Eliminar', phase, :class => "btn btn-lg btn-primary cemex-red btn-otros btn-block btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
