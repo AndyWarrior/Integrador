@@ -1,12 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Projects</h1>
+<h1>Lista de Proyectos</h1>
 
-<table>
+<div class="table-responsive">
+<table class="table" style="width: 100%;">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Description</th>
+      <th>Nombre</th>
+      <th>Descripción</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,16 +17,16 @@
       <tr>
         <td><%= project.name %></td>
         <td><%= project.description %></td>
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver Info', project, :class => "btn btn-lg btn-primary cemex-blue btn-otros btn-block btn-xs" %></td>
+        <td><%= link_to 'Editar', edit_project_path(project), :class => "btn btn-lg btn-primary cemex-blue btn-otros btn-block btn-xs" %></td>
+        <td><%= link_to 'Eliminar', project, :class => "btn btn-lg btn-primary cemex-red btn-otros btn-block btn-xs", method: :delete, data: { confirm: '¿Estás seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
+</div>
 <br>
 
-<%= link_to 'New Project', new_project_path %>
+<%= link_to 'Nuevo Proyecto', new_project_path, :class => "btn btn-lg btn-primary cemex-blue btn-otros btn-block" %>
 
-<%= link_to 'Go Back', admin_root_path %>
+<%= link_to 'Regresar', admin_root_path, :class => "btn btn-lg btn-primary cemex-blue btn-otros btn-block" %>
