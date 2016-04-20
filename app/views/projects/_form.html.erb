@@ -12,18 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.label "Nombre" %><br>
+    <%= f.text_field :name, :placeholder => "Nombre" %>
   </div>
   <div class="field">
-    <%= f.label :description %><br>
+    <%= f.label "Descripción" %><br>
     <%= f.text_area :description %>
   </div>
   <div class="field">
-    <%= f.label :program_id %><br>
+    <%= f.label "Programa" %><br>
     <%= select("project", "program_id", Program.all.collect {|p| [ p.name, p.id ] }) %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Crear Proyecto" %>
   </div>
 <% end %>
