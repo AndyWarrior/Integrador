@@ -13,6 +13,31 @@
  *= require_tree .
  *= require_self
  */
+
+ /*
+colores de cemex
+ */
+ .cemex-blue{
+  background-color: #023185;
+}
+.cemex-red{
+  background-color: #E3303D;
+}
+
+.cemex-white{
+  background-color: #FFFFFF;
+  color: #000;
+}
+
+/*
+logo
+*/
+.logo{
+  margin-top: -10px;
+  width: 70%;
+  max-width: 300px;
+}
+
 .logbox{
     float: none;
     margin: 0 auto;
@@ -46,11 +71,30 @@ body {
 {
   margin: 0 auto;
 }
+
+/*
+ligas
+*/
 .links
 {
   font-size:16px;
 
 }
+.btn-entrada{
+  margin-bottom: 20px;
+  max-width: 330px;
+
+
+}
+.btn-otros{
+
+max-width: 330px;
+color: white !important;
+}
+
+/*
+Responsive
+*/
 
 @media all and (max-width: 479px) {
     .form-signin {
@@ -64,5 +108,16 @@ body {
           box-sizing: border-box;
   padding: 15px;
   font-size: 16px;
+}
+
+
+.btn-entrada{
+  max-width: 330px;
+
+
+}
+.btn-otros{
+
+max-width: 330px;
 }
 }
