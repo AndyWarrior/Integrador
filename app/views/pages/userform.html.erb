@@ -1,0 +1,79 @@
+<h1> Datos personales </h1>
+
+<%= form_for(:user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label "Nombre" %><br>
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label "Apellidos" %><br>
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label "Calle y número" %><br>
+    <%= f.text_field :street %>
+  </div>
+  <div class="field">
+    <%= f.label "Colonia" %><br>
+    <%= f.text_field :neighborhood %>
+  </div>
+  <div class="field">
+    <%= f.label "Ciudad" %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label "Estado" %><br>
+    <%= f.text_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label "Código Postal" %><br>
+    <%= f.text_field :zip_code %>
+  </div>
+  <div class="field">
+    <%= f.label "Teléfono" %><br>
+    <%= f.text_field :telephone %>
+  </div>
+  <div class="field">
+    <%= f.label "Cuántas personas viven en su casa?" %><br>
+    <%= f.text_field :people_living %>
+  </div>
+  <div class="field">
+    <%= f.label "Cuántos cuartos para dormir tiene en su casa" %><br>
+    <%= f.text_field :rooms %>
+  </div>
+  <div class="field">
+    <%= f.label "De qué material están hechas las paredes de su casa?" %><br>
+    <%= f.text_field :wall_material %>
+  </div>
+  <div class="field">
+    <%= f.label "De qué material está hecho el techo de su casa?" %><br>
+    <%= f.text_field :roof_material %>
+  </div>
+  <div class="field">
+    <%= f.label "De qué material está hecho el piso de su casa?" %><br>
+    <%= f.text_field :floor_material %>
+  </div>
+  <div class="field">
+    <%= f.label "Contrata a un albañil o construye las cosas usted?" %><br>
+    <%= f.text_field :build_yourself %>
+  </div>
+  <div class="field">
+    <%= f.label "Cuál es la tienda de materiales más cercana a su casa?" %><br>
+    <%= f.text_field :store %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Continuar" %>
+  </div>
+<% end %>
