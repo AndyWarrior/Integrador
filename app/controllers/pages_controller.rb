@@ -33,7 +33,10 @@ class PagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:street)
+      params.require(:user).permit(:first_name, :last_name, :street, :neighborhood,
+									:city, :state, :zip_code, :telephone,
+									:people_living, :rooms, :wall_material, :roof_material,
+									:floor_material, :build_yourself, :store)
     end
 
 end
