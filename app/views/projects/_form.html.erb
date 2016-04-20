@@ -24,6 +24,6 @@
     <%= select("project", "program_id", Program.all.collect {|p| [ p.name, p.id ] }) %>
   </div>
   <div class="actions">
-    <%= f.submit "Crear Proyecto" %>
+    <%= f.submit "Crear Proyecto", :class => "btn btn-lg btn-primary cemex-blue btn-otros btn-block"%>
   </div>
 <% end %>
