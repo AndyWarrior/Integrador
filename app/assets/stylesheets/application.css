@@ -52,8 +52,55 @@ body {
 
 }
 
+/* CSS TABLA */
+.titulo
+{
+
+    font-weight: bold;
+}
+/* #Mobile (Landscape)
+================================================== */
+/* Note: Design for a width of 600px */
+@media all and (min-width: 600px) and (max-width: 767px) {
+    td.col_2{
+        display:none;
+        width:0;
+        height:0;
+        opacity:0;
+        visibility: collapse;
+    } 
+}
+/* #Mobile (Landscape)
+================================================== */
+/* Note: Design for a width of 480px */
+@media all and (min-width: 480px) and (max-width: 599px) {
+    td.col_4{
+        display:none;
+        width:0;
+        height:0;
+        opacity:0;
+        visibility: collapse;
+    } 
+
+}
+/*  #Mobile (Portrait)
+================================================== */
+/* Note: Design for a width of 320px */
 @media all and (max-width: 479px) {
-    .form-signin {
+    td.col_4{
+        display:none;
+        width:0;
+        height:0;
+        opacity:0;
+        visibility: collapse;
+    }    
+     .titulo{
+
+        font-size:10px;
+        text-align: center;
+    }
+
+      .form-signin {
   max-width: 300px;
   padding: 15px;
   margin: 0 auto;
@@ -65,4 +112,6 @@ body {
   padding: 15px;
   font-size: 16px;
 }
+}
+
 }
