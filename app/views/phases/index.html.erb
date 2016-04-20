@@ -2,7 +2,8 @@
 
 <h1>Listado de Fases</h1>
 
-<table border="1">
+<div class="table-responsive">
+<table class="table" style="width: 100%;">
   <thead>
     <tr>
       <th>Nombre</th>
@@ -16,16 +17,17 @@
       <tr>
         <td><%= phase.name %></td>
         <td><%= phase.numphase %></td>
-        <td style="border:none;"><%= link_to 'Show', phase, class: 'btn btn-primary btn-xs' %></td>
-        <td style="border:none;"><%= link_to 'Edit', edit_phase_path(phase), class: 'btn btn-primary btn-xs' %></td>
-        <td style="border:none;"><%= link_to 'Destroy', phase, class: 'btn btn-primary btn-xs', method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', phase, class: 'btn btn-primary btn-xs' %></td>
+        <td><%= link_to 'Editar', edit_phase_path(phase), class: 'btn btn-primary btn-xs' %></td>
+        <td><%= link_to 'Eliminar', phase, class: 'btn btn-primary btn-xs', method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+</div>
 
 <br>
 
-<%= link_to 'New Phase', new_phase_path, class: 'btn btn-primary btn-xs' %>
+<%= link_to 'Nueva Fase', new_phase_path, class: 'btn btn-primary btn-xs' %>
 
-<%= link_to 'Go Back', admin_root_path, class: 'btn btn-primary btn-xs' %>
+<%= link_to 'Regresar', admin_root_path, class: 'btn btn-primary btn-xs' %>
