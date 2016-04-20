@@ -12,18 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.label "Nombre" %><br>
+    <%= f.text_field :name, :placeholder => "Nombre" %>
   </div>
   <div class="field">
-    <%= f.label :numstep %><br>
-    <%= f.number_field :numstep %>
+    <%= f.label "Numero" %><br>
+    <%= f.number_field :numstep, :placeholder => "123" %>
   </div>
   <div class="field">
-    <%= f.label :phase_id %><br>
+    <%= f.label "Fase" %><br>
     <%= select("step", "phase_id", Phase.all.collect {|p| [ p.name, p.id ] }) %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Crear Paso", :class => "btn btn-lg btn-primary cemex-blue btn-otros btn-block" %>
   </div>
 <% end %>
