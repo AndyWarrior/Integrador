@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160420221506) do
+ActiveRecord::Schema.define(version: 20160421172929) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "",   null: false
@@ -43,8 +43,8 @@ ActiveRecord::Schema.define(version: 20160420221506) do
   add_index "phases", ["project_id"], name: "index_phases_on_project_id", using: :btree
 
   create_table "posts", force: :cascade do |t|
-    t.string   "title",       limit: 255
     t.text     "description", limit: 65535
+    t.string   "image",       limit: 255
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
   end
