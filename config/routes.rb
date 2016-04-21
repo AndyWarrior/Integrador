@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :projects
   resources :programs
   devise_for :admins
-  devise_for :users
+  devise_for :users, :controllers => { registrations: 'registrations' }
 
   get '/home' => "pages#userhome", as: :user_root
   get '/admin/home' => "pages#adminhome", as: :admin_root
