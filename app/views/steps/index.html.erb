@@ -17,9 +17,9 @@
       <tr>
         <td><%= step.name %></td>
         <td><%= step.numstep %></td>
-        <td><%= link_to 'Ver Info', step, :class => "btn btn-lg btn-primary cemex-blue btn-otros btn-block btn-xs" %></td>
-        <td><%= link_to 'Editar', edit_step_path(step), :class => "btn btn-lg btn-primary cemex-blue btn-otros btn-block btn-xs" %></td>
-        <td><%= link_to 'Eliminar', step, :class => "btn btn-lg btn-primary cemex-red btn-otros btn-block btn-xs",  method: :delete, data: { confirm: '¿Estás seguro?' } %></td>
+        <td><%= link_to 'Ver Info', step, :class => "btn btn-lg btn-primary cemex-blue btn-tablas btn-block btn-xs" %></td>
+        <td><%= link_to 'Editar', edit_step_path(step), :class => "btn btn-lg btn-primary cemex-blue btn-tablas btn-block btn-xs" %></td>
+        <td><%= link_to 'Eliminar', step, :class => "btn btn-lg btn-primary cemex-red btn-tablas btn-block btn-xs",  method: :delete, data: { confirm: '¿Estás seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>

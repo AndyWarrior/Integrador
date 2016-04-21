@@ -97,6 +97,10 @@ max-width: 330px;
 color: white !important;
 }
 
+.btn-tablas{
+  max-width: 100px;
+  color: white !important;
+}
 .cuadro input, button, select, textarea {
     font-family: inherit;
     font-size: inherit;

@@ -15,9 +15,9 @@
     <% @programs.each do |program| %>
     <tr>
       <td><%= program.name %></td>
-      <td><%= link_to 'Ver Info', program, :class => "btn btn-primary cemex-blue btn-otros btn-xs" %></td>
-      <td><%= link_to 'Editar', edit_program_path(program), :class => "btn btn-primary cemex-blue btn-otros btn-xs" %></td>
-      <td><%= link_to 'Eliminar', program, method: :delete, data: { confirm: '¿Eliminar Programa?'}, :class => "btn btn-primary cemex-red btn-otros btn-xs" %></td>
+      <td><%= link_to 'Ver Info', program, :class => "btn btn-primary cemex-blue btn-tablas btn-xs" %></td>
+      <td><%= link_to 'Editar', edit_program_path(program), :class => "btn btn-primary cemex-blue btn-tablas btn-xs" %></td>
+      <td><%= link_to 'Eliminar', program, method: :delete, data: { confirm: '¿Eliminar Programa?'}, :class => "btn btn-primary cemex-red btn-tablas btn-xs" %></td>
     </tr>
     <% end %>
   </tbody>
