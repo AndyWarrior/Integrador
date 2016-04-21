@@ -24,6 +24,6 @@
     <%= select("step", "phase_id", Phase.all.collect {|p| [ p.name, p.id ] }) %>
   </div>
   <div class="actions">
-    <%= f.submit "Crear Paso", :class => "btn btn-lg btn-primary cemex-blue btn-otros btn-block" %>
+    <%= f.submit "Guardar Paso", :class => "btn btn-lg btn-primary cemex-blue btn-otros btn-block" %>
   </div>
 <% end %>
