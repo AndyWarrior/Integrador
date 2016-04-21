@@ -1,8 +1,8 @@
-<div class="container  ">
+<div class="container techo">
   
   <div class= "col-sm-offset-4 col-sm-4">
 <%= image_tag "logo.png" , class: "centrado logo"%>
-
+<center>
 <h3 class="centrado">¿Olvidaste tu contraseña?</h3>
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
@@ -20,4 +20,5 @@
 
 <%= render "admins/shared/links" %>
 </div>
+</center>
 </div>

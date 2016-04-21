@@ -1,9 +1,9 @@
 
-<div class="container  ">
+<div class="container techo ">
   
   <div class= "col-sm-offset-4 col-sm-4">
 <%= image_tag "logo.png" , class: "centrado logo"%>
-
+<center>
 <h2 class="centrado">Registrarse</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -29,12 +29,12 @@
 
   <div class="field">
     <%= f.label "Programa al que pertenezco" %><br>
-    <%= f.collection_select :program, Program.all, :id, :name, :class => "form-signin"%>
+    <%= f.collection_select :program, Program.all, :id, :name, :class => "cuadro"%>
   </div>
 
   <div class="field">
     <%= f.label "Nombre del proyecto" %><br>
-    <%= f.collection_select :project, Project.all, :id, :name, :class => "form-signin"%>
+    <%= f.collection_select :project, Project.all, :id, :name, :class => "cuadro"%>
   </div>
 
   <div class="actions">
@@ -44,4 +44,5 @@
 
 <%= render "users/shared/links" %>
 </div>
+</center>
 </div>
