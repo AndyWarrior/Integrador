@@ -41,6 +41,7 @@ class PagesController < ApplicationController
 
   def savepost
     @post = Post.new(post_params)
+    @post.user_id = User.find(current_user).id
 
     respond_to do |format|
       if @post.save
