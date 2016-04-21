@@ -13,6 +13,10 @@ class PagesController < ApplicationController
   	@user = current_user
   end
 
+  def reporte
+  	@users = User.all
+  end
+
   def saveform
   	respond_to do |format|
       if @user.update(user_params)

@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h2>Reporte de Usuarios</h2>
+
+<div class="table-responsive">
+<table class="table" style="width: 100%;">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+    <tr>
+      <td><%= user.first_name %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+
+<br>
+
+<%= link_to 'Regresar', admin_root_path, :class => "btn btn-lg btn-primary cemex-blue btn-otros btn-block" %>
