@@ -1,8 +1,9 @@
 
-<div class="container  ">
+<div class="container techo ">
   
   <div class= "col-sm-offset-4 col-sm-4">
 <%= image_tag "logo.png" , class: "centrado logo"%>
+<center>
 
   <h2 class="centrado"> Iniciar sesión</h2>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|%>
@@ -16,7 +17,6 @@
     
     <%= f.password_field :password, autocomplete: "off",:placeholder => "Contraseña",:class => "form-signin" %>
   </div>
-
   <% if devise_mapping.rememberable? -%>
     <div class="field">
       <%= f.check_box :remember_me %>
@@ -32,4 +32,5 @@
 <%= render "users/shared/links"%>
 
 </div>
+</center>
 </div>

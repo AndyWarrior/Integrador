@@ -28,14 +28,18 @@ colores de cemex
   background-color: #FFFFFF;
   color: #000;
 }
-
+.techo
+{
+  margin-top: 20px;
+}
 /*
 logo
 */
 .logo{
   margin-top: -10px;
-  width: 70%;
+  width: 100%;
   max-width: 300px;
+  width: 300px !important;
 }
 
 .logbox{
@@ -51,6 +55,7 @@ body {
 
 .form-signin {
   width: 330px;
+  max-width: 330px;
   padding: 15px;
   margin: 0 auto;
    position: relative;
@@ -92,6 +97,14 @@ max-width: 330px;
 color: white !important;
 }
 
+.cuadro input, button, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    width: 300px !important;
+    height: 40px !important;
+    font-size: 18px !important;
+}
 /*
 Responsive
 */
@@ -104,6 +117,43 @@ Responsive
 }
 /* #Mobile (Landscape)
 ================================================== */
+/* Note: Design for a width of 768 */
+@media all and (min-width: 768px) and (max-width: 979px) {
+    td.col_2{
+        display:none;
+        width:0;
+        height:0;
+        opacity:0;
+        visibility: collapse;
+    } 
+
+
+.form-signin {
+  width: 330px;
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+   position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 15px;
+  font-size: 16px;
+}
+.btn-entrada{
+  width: 330px !important;
+  max-width: 330px;
+
+
+}
+.btn-otros{
+width: 330px !important;
+max-width: 330px;
+}
+}
+/* #Mobile (Landscape)
+================================================== */
 /* Note: Design for a width of 600px */
 @media all and (min-width: 600px) and (max-width: 767px) {
     td.col_2{
@@ -113,6 +163,31 @@ Responsive
         opacity:0;
         visibility: collapse;
     } 
+
+
+.form-signin {
+  width: 330px;
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+   position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 15px;
+  font-size: 16px;
+}
+.btn-entrada{
+  width: 330px !important;
+  max-width: 330px;
+
+
+}
+.btn-otros{
+width: 330px !important;
+max-width: 330px;
+}
 }
 /* #Mobile (Landscape)
 ================================================== */
@@ -126,6 +201,31 @@ Responsive
         visibility: collapse;
     } 
 
+
+.form-signin {
+  width: 300px;
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+   position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 15px;
+  font-size: 16px;
+
+}
+.btn-entrada{
+  width: 300px !important;
+  max-width: 330px;
+
+
+}
+.btn-otros{
+width: 300px !important;
+max-width: 330px;
+}
 }
 /*  #Mobile (Portrait)
 ================================================== */
@@ -160,12 +260,13 @@ Responsive
 
 
 .btn-entrada{
+  width: 300px !important;
   max-width: 330px;
 
 
 }
 .btn-otros{
-
+width: 300px !important;
 max-width: 330px;
 }
 }

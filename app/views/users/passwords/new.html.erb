@@ -1,7 +1,8 @@
-<div class="container  ">
+<div class="container techo ">
   
   <div class= "col-sm-offset-4 col-sm-4">
 <%= image_tag "logo.png" , class: "centrado logo"%>
+ <center>
 
 <h3 class="centrado">¿Olvidaste tu contraseña?</h3>
 
@@ -12,7 +13,7 @@
     
     <%= f.email_field :email, autofocus: true, :placeholder => "Correo",:class => "form-signin" %>
   </div>
-
+ 
   <div class="actions">
     <%= f.submit "Enviar ", :class => "btn btn-lg btn-primary cemex-red btn-entrada btn-block",:style => "max-width: 330px; "%>
   </div>
@@ -20,4 +21,5 @@
 
 <%= render "users/shared/links" %>
 </div>
+</center>
 </div>
