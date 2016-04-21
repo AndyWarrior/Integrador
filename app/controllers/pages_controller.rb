@@ -19,6 +19,10 @@ class PagesController < ApplicationController
   	@users = User.all
   end
 
+  def avance
+    @post = Post.new
+  end
+
   def saveform
   	respond_to do |format|
       if @user.update(user_params)
@@ -27,6 +31,20 @@ class PagesController < ApplicationController
       else
         format.html { render :edit }
         format.json { render json: @user.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  def savepost
+    @post = Post.new(post_params)
+
+    respond_to do |format|
+      if @post.save
+        format.html { redirect_to '/home', notice: 'Avance subido correctamente' }
+        format.json { render :show, status: :created, location: @post }
+      else
+        format.html { render :new }
+        format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -43,6 +61,10 @@ class PagesController < ApplicationController
 									:city, :state, :zip_code, :telephone,
 									:people_living, :rooms, :wall_material, :roof_material,
 									:floor_material, :build_yourself, :store)
+    end
+
+    def post_params
+      params.require(:post).permit(:description, :image)
     end
 
 end

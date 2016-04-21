@@ -12,7 +12,11 @@ Rails.application.routes.draw do
 
   get '/admin/reporte' => "pages#reporte", as: :admin_report
 
+  get '/user/post' => "pages#avance", as: :user_post
+
   post "/user/form" => "pages#saveform", :as => :save_form
+
+  post "/user/post" => "pages#savepost", :as => :save_post
 
 
 

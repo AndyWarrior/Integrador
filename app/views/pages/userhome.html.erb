@@ -4,6 +4,6 @@
 
 <p><font size="3"><b>Proyecto Actual:</b><%= @project.name %></font></p>
 
-<button type="button" class="btn btn-lg btn-primary cemex-blue btn-otros btn-block">Subir Imagen</button>
+<%= link_to 'Subir Foto', user_post_path, :class => "btn btn-lg btn-primary cemex-blue btn-otros btn-block" %>
 
 <button type="button" class="btn btn-lg btn-primary cemex-blue btn-otros btn-block">Avanzar Paso</button>
