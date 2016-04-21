@@ -18,7 +18,7 @@
     <% @posts.each do |post| %>
     <% u = User.find(post.user_id) %>
     <tr>
-      <td><img src= <%= post.image.url %>> </td>
+      <td><img src= <%= post.image.url %> style="max-width:300px;"/> </td>
       <td> <%= u.first_name %> </td>
       <td> <%= u.last_name %> </td>
       <td> <%= Program.find(u.program).name %> </td>
@@ -31,4 +31,6 @@
 
 <br>
 
+<center>
 <%= link_to 'Regresar', admin_root_path, :class => "btn btn-lg btn-primary cemex-blue btn-otros btn-block" %>
+</center>
