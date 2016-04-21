@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_action :set_user, only: [:saveform]
+  before_action :set_user, only: [:saveform, :userhome]
   before_action :authenticate_user!, only: [:userhome, :userform]
   before_action :authenticate_admin!, only: [:adminhome]
 
@@ -7,6 +7,8 @@ class PagesController < ApplicationController
   end
 
   def userhome
+  	@program = Program.find(@user.program)
+  	@project = Project.find(@user.project)
   end
 
   def userform
@@ -20,7 +22,7 @@ class PagesController < ApplicationController
   def saveform
   	respond_to do |format|
       if @user.update(user_params)
-        format.html { redirect_to '/home', notice: 'Program was successfully updated.' }
+        format.html { redirect_to '/home', notice: 'Información guardada correctamente' }
         format.json { render :show, status: :ok, location: @user }
       else
         format.html { render :edit }
