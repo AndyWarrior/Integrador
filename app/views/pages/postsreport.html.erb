@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h2>Reporte de Avances</h2>
+
+<div class="table-responsive">
+<table class="table" style="width: 100%;">
+  <thead>
+    <tr>
+      <th>Imagen</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Programa</th>
+      <th>Proyecto</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @posts.each do |post| %>
+    <% u = User.find(post.user_id) %>
+    <tr>
+      <td><img src= <%= post.image.url %>> </td>
+      <td> <%= u.first_name %> </td>
+      <td> <%= u.last_name %> </td>
+      <td> <%= Program.find(u.program).name %> </td>
+      <td> <%= Project.find(u.project).name %> </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+
+<br>
+
+<%= link_to 'Regresar', admin_root_path, :class => "btn btn-lg btn-primary cemex-blue btn-otros btn-block" %>

@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   before_action :set_user, only: [:saveform, :userhome]
-  before_action :authenticate_user!, only: [:userhome, :userform]
-  before_action :authenticate_admin!, only: [:adminhome]
+  before_action :authenticate_user!, only: [:userhome, :userform, :avance]
+  before_action :authenticate_admin!, only: [:adminhome, :reporte, :postsreport]
 
   def adminhome
   end
@@ -23,6 +23,10 @@ class PagesController < ApplicationController
     @post = Post.new
   end
 
+  def postsreport
+    @posts = Post.all
+  end
+
   def saveform
   	respond_to do |format|
       if @user.update(user_params)
@@ -37,6 +41,7 @@ class PagesController < ApplicationController
 
   def savepost
     @post = Post.new(post_params)
+    @post.user_id = User.find(current_user).id
 
     respond_to do |format|
       if @post.save
