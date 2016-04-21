@@ -1,5 +1,6 @@
 <h1> Datos personales </h1>
 
+<center>
 <%= form_for(:user) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
@@ -77,3 +78,4 @@
     <%= f.submit "Continuar" %>
   </div>
 <% end %>
+</center>
