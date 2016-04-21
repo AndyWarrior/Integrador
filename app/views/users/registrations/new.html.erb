@@ -27,6 +27,16 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" , :placeholder => "Contraseña",:class => "form-signin"%>
   </div>
 
+  <div class="field">
+    <%= f.label "Programa al que pertenezco" %><br>
+    <%= f.collection_select :program, Program.all, :id, :name, :class => "form-signin"%>
+  </div>
+
+  <div class="field">
+    <%= f.label "Nombre del proyecto" %><br>
+    <%= f.collection_select :project, Project.all, :id, :name, :class => "form-signin"%>
+  </div>
+
   <div class="actions">
     <%= f.submit "Registrarme", :class => "btn btn-lg btn-primary cemex-red btn-entrada btn-block" %>
   </div>
