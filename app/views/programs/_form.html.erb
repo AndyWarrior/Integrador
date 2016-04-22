@@ -15,6 +15,12 @@
     <h3><%= f.label "Nombre" %></h3>
     <%= f.text_field :name, :class => "form-signin" %>
   </div>
+
+  <div class="field">
+    <h3><%= f.label "Imágenes" %></h3>
+    <%= f.file_field :images, multiple: true, :class => "form-signin" %>
+  </div>
+
   <div class="actions">
     <%= f.submit "Guardar Programa", :class => "btn btn-lg btn-primary cemex-blue btn-otros btn-block" %>
   </div>

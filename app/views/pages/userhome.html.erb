@@ -1,5 +1,9 @@
 <h1>¡Bienvenido Usuario!</h1>
 
+<% @program.images.each do |image| %>
+    <img src= <%= image.url %> style="max-width:300px;"/>
+<% end %>
+
 <p><font size="3"><b>Programa Actual:</b><%= @program.name %> </font></p>
 
 <p><font size="3"><b>Proyecto Actual:</b><%= @project.name %></font></p>
