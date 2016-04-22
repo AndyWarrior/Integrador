@@ -17,6 +17,11 @@ class PagesController < ApplicationController
 
   def reporte
   	@users = User.all
+
+    respond_to do |format|
+      format.html
+      format.csv { send_data @users.to_csv, filename: "usuarios-#{Date.today}.csv" }
+    end
   end
 
   def avance
