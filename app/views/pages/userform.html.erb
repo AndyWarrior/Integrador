@@ -47,11 +47,11 @@
     <%= f.text_field :telephone %>
   </div>
   <div class="field">
-    <%= f.label "Cuántas personas viven en su casa?" %><br>
+    <%= f.label "¿Cuántas personas viven en su casa?" %><br>
     <%= f.number_field :people_living %>
   </div>
   <div class="field">
-    <%= f.label "Cuántos cuartos para dormir tiene en su casa" %><br>
+    <%= f.label "¿Cuántos cuartos para dormir tiene en su casa?" %><br>
     <%= f.number_field :rooms %>
   </div>
   <div class="field">
@@ -67,15 +67,16 @@
     <%= select_tag "floor_material", "<option>Tierra</option><option>Cemento o firme</option><option>Loseta vinílica, linóleum o congóleum</option><option>Mosaico o loseta de cemento</option><option>Vitropiso, mármol o terrazo</option><option>Madera, duela o parquet</option><option>Alfombra</option><option>Otro</option>".html_safe %>
   </div>
   <div class="field">
-    <%= f.label "Contrata a un albañil o construye las cosas usted?" %><br>
+    <%= f.label "¿Contrata a un albañil o construye las cosas usted?" %><br>
     <%= f.text_field :build_yourself %>
   </div>
   <div class="field">
-    <%= f.label "Cuál es la tienda de materiales más cercana a su casa?" %><br>
+    <%= f.label "¿Cuál es la tienda de materiales más cercana a su casa?" %><br>
     <%= f.text_field :store %>
   </div>
   <div class="actions">
-    <%= f.submit "Continuar" %>
+    <br/>
+    <%= f.submit "Continuar", :class => "btn btn-lg btn-primary cemex-blue btn-otros btn-block" %>
   </div>
 <% end %>
 </center>
