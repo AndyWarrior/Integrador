@@ -15,11 +15,18 @@
     <%= f.label "Descripción" %><br>
     <%= f.text_area :description %>
   </div>
+
   <div class="field">
     <%= f.label "Subir imagen" %><br>
-    <%= f.file_field :image %>
+    <%= f.file_field :image%>
   </div>
+
   <div class="actions">
-    <%= f.submit "Subir avance" %>
+    <center>
+    <br/>
+    <%= f.submit "Subir avance", :class => "btn btn-lg btn-primary cemex-blue btn-otros btn-block" %>
+    </center>
   </div>
+
 <% end %>
+
