@@ -14,6 +14,9 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+# Create seed data files from the existing data in your database
+gem 'seed_dump'
+
 # Upload images
 gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
 
