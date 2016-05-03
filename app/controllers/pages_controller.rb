@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
-  before_action :set_user, only: [:saveform, :userhome]
-  before_action :authenticate_user!, only: [:userhome, :userform, :avance]
+  before_action :set_user, only: [:saveform, :userhome, :advance]
+  before_action :authenticate_user!, only: [:userhome, :userform, :avance, :advance]
   before_action :authenticate_admin!, only: [:adminhome, :reporte, :postsreport]
 
   def adminhome
@@ -9,6 +9,30 @@ class PagesController < ApplicationController
   def userhome
   	@program = Program.find(@user.program)
   	@project = Project.find(@user.project)
+    @phases = @project.phases.sort_by &:numphase
+    @steps = @phases[@user.phase].steps.sort_by &:numstep
+  end
+
+  def advance
+    program = Program.find(@user.program)
+    project = Project.find(@user.project)
+    phases = project.phases.sort_by &:numphase
+    steps = []
+    phases.each do |phase|
+      steps.push(phase.steps.sort_by &:numstep)
+    end
+
+    if steps[@user.phase][@user.step + 1] != nil then
+      @user.update(step: @user.step + 1)
+    elsif steps[@user.phase + 1] != nil then
+      @user.update(phase: @user.phase + 1)
+      @user.update(step: 0)
+    end
+      
+    
+    respond_to do |format|
+      format.html { redirect_to '/home', notice: 'Has avanzado de paso!' }
+    end
   end
 
   def userform
@@ -33,6 +57,11 @@ class PagesController < ApplicationController
   end
 
   def saveform
+    if @user.sign_in_count == 1 then
+       @user.phase = 0
+       @user.step = 0
+    end
+
   	respond_to do |format|
       if @user.update(user_params)
         format.html { redirect_to '/home', notice: 'Información guardada correctamente' }

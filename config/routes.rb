@@ -16,6 +16,8 @@ Rails.application.routes.draw do
 
   get '/admin/posts/report' => "pages#postsreport", as: :posts_report
 
+  post "/home" => "pages#advance", :as => :user_advance
+
   post "/user/form" => "pages#saveform", :as => :save_form
 
   post "/user/post" => "pages#savepost", :as => :save_post

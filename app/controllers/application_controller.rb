@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   	if current_user.nil?
   		'/admin/home'
 	else
-	  if current_user.first_name == nil
+	  if current_user.first_name == nil then
 	  	'/user/form'
 	  else
 	  	'/home'
