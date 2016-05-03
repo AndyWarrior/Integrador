@@ -8,8 +8,17 @@
 
 <p><font size="3"><b>Proyecto Actual: </b><%= @project.name %></font></p>
 
+<% @phases.each_with_index do |phase, index| %>
+	<p> <%= phase.name %> </p>
+	<% if index == @user.phase %>
+		<% @steps.each do |step| %>
+			<p> <%= step.name %> </p>
+		<% end %>
+	<% end %>
+<% end %>
+
 <center>
 <%= link_to 'Subir Foto', user_post_path, :class => "btn btn-lg btn-primary cemex-blue btn-otros btn-block" %>
 
-<%= link_to 'Avanzar Paso', user_root_path, :class => "btn btn-lg btn-primary cemex-blue btn-otros btn-block" %>
+<%= link_to 'Avanzar Paso', user_advance_path, method: :post, :class => "btn btn-lg btn-primary cemex-blue btn-otros btn-block" %>
 </center>

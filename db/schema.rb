@@ -108,8 +108,8 @@ ActiveRecord::Schema.define(version: 20160422042057) do
     t.boolean  "active",                             default: false
     t.string   "program",                limit: 255
     t.string   "project",                limit: 255
-    t.string   "phase",                  limit: 255
-    t.string   "step",                   limit: 255
+    t.integer  "phase",                  limit: 4
+    t.integer  "step",                   limit: 4
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
