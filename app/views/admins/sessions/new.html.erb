@@ -4,6 +4,9 @@
 <%= image_tag "logo.png" , class: "centrado logo"%>
 <center>
   <h2 class="centrado"> Iniciar sesión</h2>
+  <%= content_tag(:div, flash[:error], :id => "flash_error", class: "label label-default") if flash[:error] %>
+  <%= content_tag(:div, flash[:notice], :id => "flash_notice", class: "label label-default") if flash[:notice] %>
+  <%= content_tag(:div, flash[:alert], :id => "flash_alert", class: "label label-default") if flash[:alert] %>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|%>
   
   <div class="field">
