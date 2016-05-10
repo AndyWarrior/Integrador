@@ -6,6 +6,11 @@ Rails.application.routes.draw do
   devise_for :admins
   devise_for :users, :controllers => { registrations: 'registrations' }
 
+  as :admin do
+    get 'admins/edit' => 'devise/registrations#edit', :as => 'edit_admin_registration'    
+    put 'admins' => 'devise/registrations#update', :as => 'admin_registration'            
+  end
+
   get '/home' => "pages#userhome", as: :user_root
   get '/admin/home' => "pages#adminhome", as: :admin_root
   get '/user/form' => "pages#userform", as: :user_form
