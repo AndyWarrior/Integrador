@@ -29,7 +29,7 @@ class PhasesController < ApplicationController
 
     respond_to do |format|
       if @phase.save
-        format.html { redirect_to @phase, notice: 'Phase was successfully created.' }
+        format.html { redirect_to @phase, notice: 'La fase se creó satisfactoriamente.' }
         format.json { render :show, status: :created, location: @phase }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class PhasesController < ApplicationController
   def update
     respond_to do |format|
       if @phase.update(phase_params)
-        format.html { redirect_to @phase, notice: 'Phase was successfully updated.' }
+        format.html { redirect_to @phase, notice: 'La fase se actualizó satisfactoriamente.' }
         format.json { render :show, status: :ok, location: @phase }
       else
         format.html { render :edit }
@@ -57,7 +57,7 @@ class PhasesController < ApplicationController
   def destroy
     @phase.destroy
     respond_to do |format|
-      format.html { redirect_to phases_url, notice: 'Phase was successfully destroyed.' }
+      format.html { redirect_to phases_url, notice: 'La fase se eliminó satisfactoriamente.' }
       format.json { head :no_content }
     end
   end

@@ -29,7 +29,7 @@ class StepsController < ApplicationController
 
     respond_to do |format|
       if @step.save
-        format.html { redirect_to @step, notice: 'Step was successfully created.' }
+        format.html { redirect_to @step, notice: 'El paso se creo satisfactoriamente.' }
         format.json { render :show, status: :created, location: @step }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class StepsController < ApplicationController
   def update
     respond_to do |format|
       if @step.update(step_params)
-        format.html { redirect_to @step, notice: 'Step was successfully updated.' }
+        format.html { redirect_to @step, notice: 'El paso se actualizo satisfactoriamente.' }
         format.json { render :show, status: :ok, location: @step }
       else
         format.html { render :edit }
@@ -57,7 +57,7 @@ class StepsController < ApplicationController
   def destroy
     @step.destroy
     respond_to do |format|
-      format.html { redirect_to steps_url, notice: 'Step was successfully destroyed.' }
+      format.html { redirect_to steps_url, notice: 'El paso se elimino satisfactoriamente.' }
       format.json { head :no_content }
     end
   end
