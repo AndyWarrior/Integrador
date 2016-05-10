@@ -1,25 +1,33 @@
-<h2>Change your password</h2>
+
+<div class="container techo ">
+  
+  <div class= "col-sm-offset-4 col-sm-4">
+<%= image_tag "logo.png" , class: "centrado logo"%>
+<center>
+<h2 class="centrado">Cambiar contraseña</h2>
+
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
   <%= f.hidden_field :reset_password_token %>
 
   <div class="field">
-    <%= f.label :password, "New password" %><br />
+   
     <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em><br />
+      <em>(<%= @minimum_password_length %> caracteres minimo)</em><br />
     <% end %>
-    <%= f.password_field :password, autofocus: true, autocomplete: "off" %>
+    <%= f.password_field :password, autofocus: true, autocomplete: "off" ,:placeholder => "Contraseña",:class => "form-signin"  %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation, "Confirm new password" %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    
+    <%= f.password_field :password_confirmation, autocomplete: "off",:placeholder => "Confirmar contraseña",:class => "form-signin"  %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Change my password" %>
+    <%= f.submit "Cambiar Contraseña", :class => "btn btn-lg btn-primary cemex-red btn-entrada btn-block" %>
   </div>
 <% end %>
 
 <%= render "users/shared/links" %>
+</div>
