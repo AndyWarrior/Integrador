@@ -11,8 +11,12 @@
 <% @phases.each_with_index do |phase, index| %>
 	<p> <%= phase.name %> </p>
 	<% if index == @user.phase %>
-		<% @steps.each do |step| %>
-			<p> <%= step.name %> </p>
+		<% @steps.each_with_index do |step, index2| %>
+			<% if @user.phase == index and @user.step == index2 then %>
+				<p><b> <%= step.name %> </b></p>
+			<% else %>
+				<p> <%= step.name %> </p>
+			<%end %>
 		<% end %>
 	<% end %>
 <% end %>
