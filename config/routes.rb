@@ -27,6 +27,7 @@ Rails.application.routes.draw do
 
   post "/user/post" => "pages#savepost", :as => :save_post
 
+  match 'users/:id' => 'pages#destroy', :via => :delete, :as => :admin_destroy_user
 
 
   devise_scope :user do

@@ -11,6 +11,7 @@
       <th>Apellido</th>
       <th>Programa</th>
       <th>Proyecto</th>
+      <th>Eliminar</th>
     </tr>
   </thead>
 
@@ -32,6 +33,7 @@
       <% else %>
         <td>Sin proyecto</td>
       <% end %>
+      <td><%= link_to "Eliminar", admin_destroy_user_path(user), method: :delete, data: { confirm: "Seguro que quieres eliminar a este usuario?" } %></td>
     </tr>
     <% end %>
   </tbody>
