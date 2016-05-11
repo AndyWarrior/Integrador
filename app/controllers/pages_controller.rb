@@ -60,6 +60,7 @@ class PagesController < ApplicationController
 
   def postsreport
     @posts = Post.all
+    @posts = @posts.page params[:page]
   end
 
   def saveform
