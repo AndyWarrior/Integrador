@@ -109,6 +109,35 @@ color: white !important;
     height: 40px !important;
     font-size: 18px !important;
 }
+
+
+.usuariofase{
+  
+  margin-bottom: 10px;
+  
+  color:#023185;
+}
+.cuadrofase{
+  background:#ccc;
+  border-style: solid;
+  box-shadow: 10px 10px 5px #888888;
+  margin-top: 20px;
+
+  margin-bottom: 20px;
+  max-width: 250px;
+  padding-bottom:10px; 
+  padding-top:10px;
+
+}
+.cuadroSelec
+{
+  background: #bbb;
+  padding-bottom: 10px;
+  }
+.imgbaner
+{
+  width: 200px;
+}
 /*
 Responsive
 */
@@ -155,6 +184,10 @@ Responsive
 width: 330px !important;
 max-width: 330px;
 }
+.imgbaner
+{
+  width: 200px;
+}
 }
 /* #Mobile (Landscape)
 ================================================== */
@@ -191,6 +224,10 @@ max-width: 330px;
 .btn-otros{
 width: 330px !important;
 max-width: 330px;
+}
+.imgbaner
+{
+  width: 200px;
 }
 }
 /* #Mobile (Landscape)
@@ -229,6 +266,10 @@ max-width: 330px;
 .btn-otros{
 width: 300px !important;
 max-width: 330px;
+}
+.imgbaner
+{
+  width: 100px;
 }
 }
 /*  #Mobile (Portrait)
@@ -272,5 +313,9 @@ max-width: 330px;
 .btn-otros{
 width: 300px !important;
 max-width: 330px;
+}
+.imgbaner
+{
+  width: 100px;
 }
 }
