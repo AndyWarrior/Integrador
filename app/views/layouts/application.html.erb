@@ -12,33 +12,37 @@
   
 <% else %>
   <% if current_admin.nil? %>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" style="width: 45px !important">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/home">Yo Construyo</a>
-      </div>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" style="width: 45px !important">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <% if current_user.step != nil then %>
+            <a class="navbar-brand" href="/home">Yo Construyo</a>
+          <% end %>
+        </div>
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li><%= link_to 'Mi proyecto', user_root_path%></li>
-          <li><%= link_to 'Mi perfil', user_form_path%></li>
-          <li><%= link_to "Cambiar contraseña", edit_user_registration_path %></li>
-         
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to('Salir', destroy_admin_session_path, :method => :delete) %>  </li>
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <% if current_user.step != nil then %>
+            <ul class="nav navbar-nav">
+              <li><%= link_to 'Mi proyecto', user_root_path%></li>
+              <li><%= link_to 'Mi perfil', user_form_path%></li>
+              <li><%= link_to "Cambiar contraseña", edit_user_registration_path %></li>
+             
+            </ul>
+          <% end %>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to('Salir', destroy_admin_session_path, :method => :delete) %>  </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
 <% else %>
  <nav class="navbar navbar-default">
     <div class="container-fluid">
