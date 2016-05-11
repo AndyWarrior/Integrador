@@ -23,7 +23,8 @@
 
 
 			<% @phases.each_with_index do |phase, index| %>
-				<p> <%= phase.name %> </p>
+				
+				<p>Fase #<%="#{index+1}: #{phase.name}"%> </p>
 				<% if index == @user.phase %>
 					<% @steps.each_with_index do |step, index2| %>
 						<% if @user.phase == index and @user.step == index2 then %>
