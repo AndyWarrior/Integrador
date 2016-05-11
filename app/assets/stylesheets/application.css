@@ -290,7 +290,7 @@ max-width: 330px;
     }
 
       .form-signin {
-  max-width: 300px;
+  max-width: 250px;
   padding: 15px;
   margin: 0 auto;
    position: relative;
@@ -305,13 +305,13 @@ max-width: 330px;
 
 
 .btn-entrada{
-  width: 300px !important;
+  width: 250px !important;
   max-width: 330px;
 
 
 }
 .btn-otros{
-width: 300px !important;
+width: 250px !important;
 max-width: 330px;
 }
 .imgbaner
