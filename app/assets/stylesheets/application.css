@@ -86,13 +86,14 @@ ligas
 
 }
 .btn-entrada{
+  width:300px !important;
   margin-bottom: 20px;
   max-width: 330px;
 
 
 }
 .btn-otros{
-
+width:300px !important;
 max-width: 330px;
 color: white !important;
 }
@@ -138,6 +139,7 @@ color: white !important;
 {
   width: 200px;
 }
+
 /*
 Responsive
 */
@@ -175,13 +177,13 @@ Responsive
   font-size: 16px;
 }
 .btn-entrada{
-  width: 330px !important;
+  width: 300px !important;
   max-width: 330px;
 
 
 }
 .btn-otros{
-width: 330px !important;
+width: 300px !important;
 max-width: 330px;
 }
 .imgbaner
@@ -216,13 +218,13 @@ max-width: 330px;
   font-size: 16px;
 }
 .btn-entrada{
-  width: 330px !important;
+  width: 300px !important;
   max-width: 330px;
 
 
 }
 .btn-otros{
-width: 330px !important;
+width: 300px !important;
 max-width: 330px;
 }
 .imgbaner
@@ -317,5 +319,11 @@ max-width: 330px;
 .imgbaner
 {
   width: 100px;
+}
+.logo{
+  margin-top: -10px;
+  width: 100%;
+  max-width: 300px;
+  width: 250px !important;
 }
 }
