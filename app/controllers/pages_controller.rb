@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   before_action :set_user, only: [:saveform, :userhome, :advance]
-  before_action :authenticate_user!, only: [:userhome, :userform, :avance, :advance]
-  before_action :authenticate_admin!, only: [:adminhome, :reporte, :postsreport]
+  before_action :authenticate_user!, only: [:userhome, :userform, :avance, :advance, :savepost, :saveform]
+  before_action :authenticate_admin!, only: [:adminhome, :reporte, :postsreport, :destroy]
 
   def adminhome
   end

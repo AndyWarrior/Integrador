@@ -4,6 +4,27 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   </head>
 
+  <script>
+$(document).on('change', '.btn-file :file', function() {
+  var input = $(this),
+      numFiles = input.get(0).files ? input.get(0).files.length : 1,
+      label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+  input.trigger('fileselect', [numFiles, label]);
+});
+
+$(document).ready( function() {
+    $('.btn-file :file').on('fileselect', function(event, numFiles, label) {
+        
+        var input = $(this).parents('.input-group').find(':text'),
+            log = numFiles > 1 ? numFiles + ' files selected' : label;
+        
+            input.val(log);
+  
+        
+    });
+});
+    </script>
+
   <style>
 
   .btn-file {
@@ -25,6 +46,11 @@
     background: white;
     cursor: inherit;
     display: block;
+}
+
+.print-clean {
+    border: none;
+    background: transparent;
 }
 </style>
 
@@ -49,13 +75,30 @@
 
   <div class="field">
     <%= f.label "Subir imagen" %><br>
+    <!--<%= f.file_field :image %> -->
 
-    <span class="btn btn-lg cemex-blue btn-otros btn-file"> 
+
+   <!-- <span class="btn btn-lg cemex-blue btn-otros btn-file"> 
       <i class="glyphicon glyphicon-camera"></i> Escoger Imagen
-    <%= f.file_field :image %>
-    </span> 
+    <%= f.file_field :image %> 
+    <input type="text" class="form-control" readonly>
+    </span> -->
 
-  </div>
+        
+
+              <div class="input-group">
+                <span class="input-group">
+                    <span class="btn btn-lg cemex-blue btn-otros btn-file">
+                       <i class="glyphicon glyphicon-camera"></i> Escoger Imagen 
+                      <%= f.file_field :image %>
+                    </span>
+                </span>
+
+                <div class="col-xs-6">
+                  <input type="text" size="45" class = "print-clean"id="ex3" readonly>
+                </div>
+              </div>
+            
 
 
 
