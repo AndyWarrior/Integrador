@@ -15,9 +15,20 @@ class User < ActiveRecord::Base
       csv << attributes
 
       all.each do |user|
+        prog = Program.find_by_id(user.program)
+        if prog != nil then
+          prog = prog.name
+        else
+          prog = "Sin programa"
+        end
+        proy = Project.find_by_id(user.project)
+        if proy != nil then
+          proy = proy.name
+        else
+          proy = "Sin proyecto"
+        end
         csv << [user.id, user.email, user.first_name, 
-          user.last_name, Program.find(user.program).name, 
-          Project.find(user.project).name, user.street, 
+          user.last_name, prog, proy, user.street, 
           user.neighborhood, user.city, user.state, 
           user.zip_code, user.telephone, user.people_living, 
           user.rooms, user.wall_material, user.roof_material, 

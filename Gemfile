@@ -26,6 +26,9 @@ gem 'devise'
 #Use bootstrap
 gem "twitter-bootstrap-rails"
 
+#Pagination for users report
+gem 'kaminari'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks

@@ -11,6 +11,7 @@
       <th>Apellido</th>
       <th>Programa</th>
       <th>Proyecto</th>
+      <th>Eliminar</th>
     </tr>
   </thead>
 
@@ -20,12 +21,26 @@
       <td><%= user.id %></td>
       <td><%= user.first_name %></td>
       <td><%= user.last_name %></td>
-      <td><%= Program.find((user.program).to_i).name %></td>
-      <td><%= Project.find((user.project).to_i).name %></td>
+      <% p = Program.find_by_id((user.program).to_i) %>
+      <% if p != nil then %>
+        <td><%= p.name %></td>
+      <% else %>
+        <td>Sin programa</td>
+      <% end %>
+      <% p = Project.find_by_id((user.project).to_i) %>
+      <% if p != nil then %>
+        <td><%= p.name %></td>
+      <% else %>
+        <td>Sin proyecto</td>
+      <% end %>
+      <td><%= link_to "Eliminar", admin_destroy_user_path(user), method: :delete, data: { confirm: "Seguro que quieres eliminar a este usuario?" } %></td>
     </tr>
     <% end %>
   </tbody>
 </table>
+  <div class="text-center">
+    <%= paginate @users, :window => 2 %>
+</div>
 </div>
 
 <br>

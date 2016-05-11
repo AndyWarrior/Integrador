@@ -7,10 +7,15 @@ class PagesController < ApplicationController
   end
 
   def userhome
-  	@program = Program.find(@user.program)
-  	@project = Project.find(@user.project)
-    @phases = @project.phases.sort_by &:numphase
-    @steps = @phases[@user.phase].steps.sort_by &:numstep
+    @program = Program.find_by_id(@user.program)
+  	@project = Project.find_by_id(@user.project)
+    if @project != nil then
+      @phases = @project.phases.sort_by &:numphase
+
+      if @phases.size > 0 then
+        @steps = @phases[@user.phase].steps.sort_by &:numstep
+      end
+    end
   end
 
   def advance
@@ -41,6 +46,7 @@ class PagesController < ApplicationController
 
   def reporte
   	@users = User.all
+    @users = @users.page params[:page]
 
     respond_to do |format|
       format.html
@@ -54,6 +60,7 @@ class PagesController < ApplicationController
 
   def postsreport
     @posts = Post.all
+    @posts = @posts.page params[:page]
   end
 
   def saveform
@@ -85,6 +92,15 @@ class PagesController < ApplicationController
         format.html { render :new }
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
+    end
+  end
+
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+
+    if @user.destroy
+        redirect_to admin_report_path, notice: "Usuario eliminado."
     end
   end
 
