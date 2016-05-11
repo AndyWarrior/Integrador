@@ -7,11 +7,14 @@ class PagesController < ApplicationController
   end
 
   def userhome
-  	@program = Program.find(@user.program)
-  	@project = Project.find(@user.project)
-    @phases = @project.phases.sort_by &:numphase
-    if @phases.size > 0 then
-      @steps = @phases[@user.phase].steps.sort_by &:numstep
+    @program = Program.find_by_id(@user.program)
+  	@project = Project.find_by_id(@user.project)
+    if @project != nil then
+      @phases = @project.phases.sort_by &:numphase
+
+      if @phases.size > 0 then
+        @steps = @phases[@user.phase].steps.sort_by &:numstep
+      end
     end
   end
 

@@ -1,5 +1,9 @@
-<h1>¡Bienvenido Usuario!</h1>
+<h1>¡Bienvenido!</h1>
 
+<% if @project == nil or @program == nil then %>
+	<p><font size="3"><b>No tienes un proyecto o programa asignado. </b></font></p>
+
+<% else %>
 <% @program.images.each do |image| %>
     <img src= <%= image.url %> style="max-width:300px;"/>
 <% end %>
@@ -24,6 +28,9 @@
 <center>
 <%= link_to 'Subir Foto', user_post_path, :class => "btn btn-lg btn-primary cemex-blue btn-otros btn-block" %>
 
-<%= link_to 'Avanzar Paso', user_advance_path, method: :post, :class => "btn btn-lg btn-primary cemex-blue btn-otros btn-block" %>
+<% if @phases.size != 0 then %>
+	<%= link_to 'Avanzar Paso', user_advance_path, method: :post, :class => "btn btn-lg btn-primary cemex-blue btn-otros btn-block" %>
+<% end %>
 </center>
 
+<% end %>
