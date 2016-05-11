@@ -1,3 +1,33 @@
+<!DOCTYPE html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  </head>
+
+  <style>
+
+  .btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+</style>
+
 <%= form_for(:post) do |f| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
@@ -11,6 +41,7 @@
     </div>
   <% end %>
 
+  <center>
   <div class="field">
     <%= f.label "Descripción" %><br>
     <%= f.text_area :description %>
@@ -18,13 +49,22 @@
 
   <div class="field">
     <%= f.label "Subir imagen" %><br>
-    <%= f.file_field :image%>
+
+    <span class="btn btn-lg cemex-blue btn-otros btn-file"> 
+      <i class="glyphicon glyphicon-camera"></i> Escoger Imagen
+    <%= f.file_field :image %>
+    </span> 
+
   </div>
+
+
+
+</center>
 
   <div class="actions">
     <center>
     <br/>
-    <%= f.submit "Subir avance", :class => "btn btn-lg btn-primary cemex-blue btn-otros btn-block" %>
+    <%= f.submit "Subir avance", :class => "btn btn-lg cemex-blue btn-otros btn-block" %>
     </center>
   </div>
 
