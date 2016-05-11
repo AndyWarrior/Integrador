@@ -46,6 +46,7 @@ class PagesController < ApplicationController
 
   def reporte
   	@users = User.all
+    @users = @users.page params[:page]
 
     respond_to do |format|
       format.html
