@@ -1,30 +1,34 @@
-<h2>Cambiar Contraseña</h2>
+<div class="container techo ">
+  <center>
+  <h2>Cambiar Contraseña</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= devise_error_messages! %>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    <%= devise_error_messages! %>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+      <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+    <% end %>
+
+    <div class="field">
+      
+      <%= f.password_field :current_password, autocomplete: "off",:placeholder => "Contraseña actual",:class => "form-signin"  %>
+    </div>
+
+    <div class="field">
+      
+      <%= f.password_field :password, autocomplete: "off" ,:placeholder => "Nueva contraseña",:class => "form-signin" %>
+    </div>
+
+    <div class="field">
+     
+      <%= f.password_field :password_confirmation, autocomplete: "off",:placeholder => "Confirmar contraseña",:class => "form-signin"  %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Guardar", :class => "btn btn-lg btn-primary cemex-red btn-entrada btn-block"  %>
+    </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label "Contraseña actual" %> <i>(Necesitamos tu contraseña actual para saber que eres tú)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label "Nueva contraseña" %> <i>(Déjala en blanco si no quieres cambiarla)</i><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label "Confirmar contraseña" %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Guardar" %>
-  </div>
-<% end %>
-
-<%= link_to "Regresar", :back %>
+  <%= link_to "Regresar", :back,:class => "btn btn-lg btn-otros cemex-blue btn-entrada btn-block" %>
+  </center>
+</div>

@@ -1,29 +1,42 @@
-<h1>¡Bienvenido!</h1>
+<p id="notice"><%= notice %></p>
+<center><h1>¡Bienvenido!</h1></center>
 
 <% if @project == nil or @program == nil then %>
 	<p><font size="3"><b>No tienes un proyecto o programa asignado. </b></font></p>
 
 <% else %>
+<div class="row">
 <% @program.images.each do |image| %>
-    <img src= <%= image.url %> style="max-width:300px;"/>
+	<div class="col-sm-4">
+    <center>
+    <img src= <%= image.url %> class="imgbaner"/>
+    </center>
+    </div>
 <% end %>
+</div>
+<center>
+	<div class="cuadrofase">
+		<div  class="usuariofase">
+			<p><font size="3"><b>Programa Actual: </b><%= @program.name %> </font></p>
 
-<p><font size="3"><b>Programa Actual: </b><%= @program.name %> </font></p>
+			<p><font size="3"><b>Proyecto Actual: </b><%= @project.name %></font></p>
 
-<p><font size="3"><b>Proyecto Actual: </b><%= @project.name %></font></p>
 
-<% @phases.each_with_index do |phase, index| %>
-	<p> <%= phase.name %> </p>
-	<% if index == @user.phase %>
-		<% @steps.each_with_index do |step, index2| %>
-			<% if @user.phase == index and @user.step == index2 then %>
-				<p><b> <%= step.name %> </b></p>
-			<% else %>
-				<p> <%= step.name %> </p>
-			<%end %>
-		<% end %>
-	<% end %>
-<% end %>
+			<% @phases.each_with_index do |phase, index| %>
+				<p> <%= phase.name %> </p>
+				<% if index == @user.phase %>
+					<% @steps.each_with_index do |step, index2| %>
+						<% if @user.phase == index and @user.step == index2 then %>
+							<div  class="cuadroSelec"><p><b> <%= step.name %> </b></p></div>
+						<% else %>
+							<div  class="cuadroSelec"><p> <%= step.name %> </p></div>
+						<%end %>
+					<% end %>
+				<% end %>
+			<% end %>
+		</div>
+	</div>
+</center>
 
 <center>
 <%= link_to 'Subir Foto', user_post_path, :class => "btn btn-lg btn-primary cemex-blue btn-otros btn-block" %>
