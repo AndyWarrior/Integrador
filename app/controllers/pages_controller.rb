@@ -10,7 +10,9 @@ class PagesController < ApplicationController
   	@program = Program.find(@user.program)
   	@project = Project.find(@user.project)
     @phases = @project.phases.sort_by &:numphase
-    @steps = @phases[@user.phase].steps.sort_by &:numstep
+    if @phases.size > 0 then
+      @steps = @phases[@user.phase].steps.sort_by &:numstep
+    end
   end
 
   def advance
