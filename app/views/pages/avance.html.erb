@@ -15,7 +15,7 @@ $(document).on('change', '.btn-file :file', function() {
 $(document).ready( function() {
     $('.btn-file :file').on('fileselect', function(event, numFiles, label) {
         
-        var input = $(this).parents('.input-group').find(':text'),
+        var input = $(this).parents('.btn-file').find(':text'),
             log = numFiles > 1 ? numFiles + ' files selected' : label;
         
             input.val(log);
@@ -86,7 +86,7 @@ $(document).ready( function() {
 
         
 
-              <div class="input-group">
+              <div class="btn-file">
                 <span class="input-group">
                     <span class="btn btn-lg cemex-blue btn-otros btn-file">
                        <i class="glyphicon glyphicon-camera"></i> Escoger Imagen 
